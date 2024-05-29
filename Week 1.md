@@ -11,6 +11,8 @@ Show off Obsidian
 # Readings
 Chapter 1 -- Intro
 
+test
+
 # Programming Basics
 Today, computers are *everywhere* from phones and laptops to giant server farms that allow us to watch movies on demand from wherever we are. There is one thing that each of these different types of computer have in common: they're all running programs written by people.
 
