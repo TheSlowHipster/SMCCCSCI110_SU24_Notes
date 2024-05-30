@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Week 1.md",
+                "file": "Week 2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week 1.md",
+                "file": "Week 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week 1.md",
+                "file": "Week 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week 1.md"
+                "file": "Week 2.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "5e46efcc2f5a6fe0",
   "lastOpenFiles": [
+    "Week 1.md",
     "Example.class",
     "Example.java",
     "Week 2.md",
-    "Week 1.md",
     "2024-05-29.md",
     "Untitled.canvas"
   ]

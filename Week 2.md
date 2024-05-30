@@ -48,4 +48,33 @@ Simple, right? This allocates enough space in memory to hold an `int` primitive 
 int numStudents = 13;
 ```
 ## Using Variables
-Just like in math, we have coding expressions made up of one or more variables, operators, parentheses, or literals that would normally appear in code. Generally these expressions are what get evaluated on the right side of an assignment and stored in the variable on the left. 
+Just like in math, we have coding expressions made up of one or more variables, operators, parentheses, or literals that would normally appear in code. Generally these expressions are what get evaluated on the right side of an assignment and stored in the variable on the left.
+## Constant Variables vs. Literals
+Sometimes, we want to reuse a value multiple times over and over again. For example, let's say we are trying to write a program that can calculate how long it would take to travel from one planet to another at light speed. We could write a program like:
+```java
+class LightspeedCalculator{
+	public static void main(String[] args){
+		System.out.println("How many miles is it to the planet?");
+		// Open the terminal input as a scanner
+		Scanner scnr = new Scanner(System.in);
+		double distance = scnr.nextDouble();
+		System.out.println("Your planet would take " + distance / 671000000.0 + " hours");
+	}
+}
+```
+This *works*, but without a comment we wouldn't know that `671000000` is the speed of light in miles per hour. One way that we can fix this is to use a constant variable.
+
+To use a constant variable we attach the keyword `final` to it. We can then change our code to instead be:
+```java
+class LightspeedCalculator{
+	public static void main(String[] args){
+		final double LIGHT_SPEED_MPH = 671000000.0
+		System.out.println("How many miles is it to the planet?");
+		// Open the terminal input as a scanner
+		Scanner scnr = new Scanner(System.in);
+		double distance = scnr.nextDouble();
+		System.out.println("Your planet would take " + distance / LIGHT_SPEED_MPH + " hours");
+	}
+}
+```
+This also comes with an added perk! We can refer to this constant variable *anytime* we want the speed of light in miles per hour. Unlike a normal variable that is usually named in *camel case* with the first word lowercase and the first letter of every successive word uppercase, constants are usually written in an all caps *snake case* with underscores separating each of the 
