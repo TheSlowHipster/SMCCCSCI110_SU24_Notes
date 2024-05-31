@@ -1,4 +1,4 @@
-#variables #debugging 
+#variables #debugging #casting
 # Readings
 * Chapter 2
 # Variables
@@ -77,4 +77,21 @@ class LightspeedCalculator{
 	}
 }
 ```
-This also comes with an added perk! We can refer to this constant variable *anytime* we want the speed of light in miles per hour. Unlike a normal variable that is usually named in *camel case* with the first word lowercase and the first letter of every successive word uppercase, constants are usually written in an all caps *snake case* with underscores separating each of the 
+This also comes with an added perk! We can refer to this constant variable *anytime* we want the speed of light in miles per hour. Unlike a normal variable that is usually named in *camel case* with the first word lowercase and the first letter of every successive word uppercase, constants are usually written in an all caps *snake case* with underscores separating each of the words.
+# Using Different Variable Types
+ Not all types are created identical. The following is a few points that you should keep in mind when using different types.
+## "Switching" Types
+Sometimes, we are able to use types more-or-less interchangeably. This is actually an illusion! This is because we are able to tell the computer to treat some data as if it were a different type from what it actually is. This process is known as *casting*. We can do it either explicitly or implicitly; to explicitly cast a variable or value we include the new type in parenthesis before the value or variable that we're casting. If we want to implicitly cast we simply use the value or variable as if it were our desired type.
+
+One thing we have to be aware of when we're converting a `double` to an `int` is rounding! If we do this cast, we round by dropping all of the non-whole number part of the value. 
+## Number Variables
+### Picking a Number Type
+When we want to store and utilize numbers we have two different sets of types. Like I previously mentioned there's the set of `int` types that store whole numbers and the set of `double` types that store numbers with fractional parts. It is important to remember that its easier for the computer to store whole numbers than it is fractional numbers, so whenever we are expecting a whole number value we should be using `int` over `double`!
+### Special Features of `double`s
+Now I've glossed over another important thing that `double`s can do. Because they're not actually storing the exact number^[They store a kind of scientific notation in binary.] we have a couple of special values that we can store. These are: positive and negative infinity, as well as `NaN` or "Not a Number."
+### Integer Division and Modulo
+Generally, outside of the world of programming the regular division operator is "/". However, in programming, especially with Java this same character is context dependant. If both operands are integers, then the `/` operator performs integer division. This is similar to regular division, with the important step of dropping the decimal places. If one of the operands is a decimal number, the `/` operator performs a regular division. You might get a warning about implicit conversion if you do this though.
+### Number Overflow
+Because each number is limited to how big it can be by how many bits it has, there is a *biggest* number for each number data type. If we try to increase our number past this biggest value we overflow. When an overflow happens, each binary digit gets reset and counting re-starts at the first value, usually 1.
+## Strings
+Where a `char` is a single character surrounded by a single quote (`'`) , a `String` is a series of `char`s surrounded by double quotes (`"`). Because they aren't a primitive type, they don't actually get stored directly in the variable. Instead `String` is a reference type and a reference to the `String` literal gets stored. Because of this anytime we create a new string we have to create a new literal in memory. This process used to be much slower than it is now, which is why the `StringBuilder` class exists. However nowadays, if we want to modify strings by adding things to them we can use `+` to append strings together.
