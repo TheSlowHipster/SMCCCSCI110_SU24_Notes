@@ -1,15 +1,14 @@
 class Example {
 
     public static void main(String[] args) {
-        int[] arr = new int[100];
-        for (int j = 0; j < arr.length; j++) {
-            arr[j] = (int) ((double) j / (double) 10);
+        String firstString = "Jemma";
+        String secondString = "Computer Science";
+        if (firstString.equals(secondString)) {
+            // This code will not run, the strings are not equal
         }
-        System.out.print("[ ");
-        for (int j = 0; j < arr.length - 1; j++) {
-            System.out.print(arr[j] + " ");
+        if (firstString.compareTo(secondString) > 0) {
+            // This code will run because "Computer Science" comes after "Jemma" in
+            // alphabetic order
         }
-        System.out.print(arr[arr.length - 1] + " ]");
-
     }
 }
