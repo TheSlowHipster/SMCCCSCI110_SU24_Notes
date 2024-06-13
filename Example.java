@@ -1,14 +1,20 @@
+import java.util.Scanner;
+
 class Example {
 
     public static void main(String[] args) {
-        String firstString = "Jemma";
-        String secondString = "Computer Science";
-        if (firstString.equals(secondString)) {
-            // This code will not run, the strings are not equal
+        Scanner scnr = new Scanner(System.in);
+        System.out.print("How many pets do you have? ");
+        int numPets = scnr.nextInt();
+        if ((numPets < 4) && (numPets >= 0)) {
+            System.out.println("You have a reasonable number of pets.");
+        } else if ((numPets <= 6) || (numPets == 100)) {
+            System.out.println("Wow, you have a lot of pets!");
+        } else if (!(numPets > 90)) {
+            System.out.println("You have so many pets how do you take care of them all?");
+        } else {
+            System.out.println("That's an interesting number of pets.");
         }
-        if (firstString.compareTo(secondString) > 0) {
-            // This code will run because "Computer Science" comes after "Jemma" in
-            // alphabetic order
-        }
+        System.out.println("After the if block");
     }
 }
