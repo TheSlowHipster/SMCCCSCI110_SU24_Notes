@@ -16,5 +16,19 @@ class Example {
             System.out.println("That's an interesting number of pets.");
         }
         System.out.println("After the if block");
+        for (int i = 0; i < 11; i = i + 1) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        String input;
+        do {
+            System.out.println("Type 'jem' to continue");
+            input = scnr.next();
+        } while (!input.equals("jem"));
+        int[] ints = { 1, 2, 3, 4, 5 };
+        for (int i : ints) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
     }
 }
