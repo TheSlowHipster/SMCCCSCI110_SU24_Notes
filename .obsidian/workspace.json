@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "550b4722a6318cfe",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,7 +157,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b68ff18e890a511e",
+  "active": "550b4722a6318cfe",
   "lastOpenFiles": [
     "Week 8.md",
     "Week 9.md",
